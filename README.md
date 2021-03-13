@@ -5,7 +5,7 @@ This repository is for the CVPR 2021 paper, "Generating Diverse Structure for Im
 
 If our method is useful for your research, please consider citing.
 
-<intro src="./intro.png" style="zoom:50%">
+<img src="./intro.png" width = "299" height = "309" alt="intro" align=center />
 
 ## Installation
 This code was tested with TensorFlow 1.12.0, CUDA 9.0, Python 3.6 and Ubuntu 16.04
