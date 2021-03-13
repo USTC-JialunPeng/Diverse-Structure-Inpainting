@@ -19,7 +19,15 @@ Clone this repository：
 git clone https://github.com/USTC-JialunPeng/Diverse-Structure-Inpainting.git
 ```
 
+## Datasets
+* [CelebA-HQ](https://github.com/tkarras/progressive_growing_of_gans): the 1024x1024 high-resolution face images from Growing GANs. 24183 for training, 2993 images for validation and 2824 images for testing.
+* [Places2](http://places2.csail.mit.edu/): the challenge data from 365 scene categories. 8 Million images for training, 36K images for validation and 328K images for testing.
+* [ImageNet](http://www.image-net.org/): the data from 1000 natural categories. 1 Million images for training and 50K images for validation.
 
+## Training
+
+
+## Testing
 
 ## Pre-trained Models
 Download the pre-trained models using the following links and put them under `model_logs/` directory.
