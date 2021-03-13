@@ -9,6 +9,8 @@ If our method is useful for your research, please consider citing.
 <img src="./intro.png" width="50%" height="50%">
 </div>
 
+*(Top) Input incomplete image, where the missing region is depicted in gray. (Middle) Visualization of the generated diverse structures. (Bottom) Output images of our method.*
+
 ## Installation
 This code was tested with TensorFlow 1.12.0, CUDA 9.0, Python 3.6 and Ubuntu 16.04
 
