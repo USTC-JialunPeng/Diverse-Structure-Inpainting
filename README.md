@@ -22,7 +22,7 @@ git clone https://github.com/USTC-JialunPeng/Diverse-Structure-Inpainting.git
 ```
 
 ## Datasets
-* [CelebA-HQ](https://github.com/tkarras/progressive_growing_of_gans): the high-resolution face images from Growing GANs. 24183 for training, 2993 images for validation and 2824 images for testing.
+* [CelebA-HQ](https://github.com/tkarras/progressive_growing_of_gans): the high-resolution face images from Growing GANs. 24183 images for training, 2993 images for validation and 2824 images for testing.
 * [Places2](http://places2.csail.mit.edu/): the challenge data from 365 scene categories. 8 Million images for training, 36K images for validation and 328K images for testing.
 * [ImageNet](http://www.image-net.org/): the data from 1000 natural categories. 1 Million images for training and 50K images for validation.
 
@@ -56,5 +56,5 @@ Download the pre-trained models using the following links and put them under `mo
 The **center_mask models** are trained with images of 256x256 resolution with center 128x128 holes. The **random_mask models** are trained with random regular and irregular holes.
 
 ## Inference Time
-* One advantage that GAN-based and VAE-based methods have is their fast inference speed. We measure that [FE](https://github.com/KumapowerLIU/Rethinking-Inpainting-MEDFE) runs at 0.2 seconds per image on a single NVIDIA 1080 Ti GPU for images of resolution 256×256. In contrast, our model runs at 45 seconds per image. Naively sampling our autoregressive network is a major source of wasted time. Fortunately, this time can be reduced by an order of magnitude using an [incremental sampling technique](https://github.com/PrajitR/fast-pixel-cnn) which caches and reuses intermediate states of the network. Consider using this technique for faster inference.
+One advantage that GAN-based and VAE-based methods have is their fast inference speed. We measure that [Mutual Encoder-Decoder with Feature Equalizations](https://github.com/KumapowerLIU/Rethinking-Inpainting-MEDFE) runs at 0.2 seconds per image on a single NVIDIA 1080 Ti GPU for images of resolution 256×256. In contrast, our model runs at 45 seconds per image. Naively sampling our autoregressive network is a major source of wasted time. Fortunately, this time can be reduced by an order of magnitude using an [incremental sampling technique](https://github.com/PrajitR/fast-pixel-cnn) which caches and reuses intermediate states of the network. Consider using this technique for faster inference.
 
