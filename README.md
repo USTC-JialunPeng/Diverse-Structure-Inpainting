@@ -1,10 +1,12 @@
 # Diverse Structure Inpainting
 
-## Introduction
+ArXiv | Papar | Supplementary Material | BibTex
+
 This repository is for the CVPR 2021 paper, "Generating Diverse Structure for Image Inpainting with Hierarchical VQ-VAE".
 
 If our method is useful for your research, please consider citing.
 
+## Introduction
 <div align=center>
 <img src="./intro.png" width="50%" height="50%">
 </div>
@@ -38,7 +40,8 @@ git clone https://github.com/USTC-JialunPeng/Diverse-Structure-Inpainting.git
 * Run `python save_full_model.py` to save the whole model.
 
 ## Testing
-* Collect the testing set and the corresponding mask set (grayscale, 255 indicates missing region). 
+* Collect the testing set. For CelebA-HQ, we resize each image to 256x256. For Places2 and ImageNet, we crop a center 256x256.
+* Collect the corresponding mask set (2D grayscale, 0 indicates the known region, 255 indicates the missing region). 
 * Prepare the img file list and the mask file list as training.
 * Modify `checkpoints_dir`, `dataset`, `img_flist` and `mask_flist` arguments in `test.py`.
 * Download the pre-trained model and put `model.ckpt.meta`, `model.ckpt.index`, `model.ckpt.data-00000-of-00001` and `checkpoint` under `model_logs/` directory.
@@ -51,3 +54,7 @@ Download the pre-trained models using the following links and put them under `mo
 * `random_mask model`: [CelebA-HQ_random](https://drive.google.com/drive/folders/1jLGVwWREwfGaKEzsr8f4IUqCCFANkFvG) | [Places2_random](https://drive.google.com/drive/folders/1h6tU-2P1j2DFAD42VntFS7XsKNRBI7__) | [ImageNet_random](https://drive.google.com/drive/folders/1ZNh9vjZGevCjUg-mF08pT6L3KZLo8MTL)
 
 The **center_mask models** are trained with images of 256x256 resolution with center 128x128 holes. The **random_mask models** are trained with random regular and irregular holes.
+
+## Inference Time
+* One advantage that GAN-based and VAE-based methods have is their fast inference speed. We measure that [FE](https://github.com/KumapowerLIU/Rethinking-Inpainting-MEDFE) runs at 0.2 seconds per image on a single NVIDIA 1080 Ti GPU for images of resolution 256×256. In contrast, our model runs at 45 seconds per image. Naively sampling our autoregressive network is a major source of wasted time. Fortunately, this time can be reduced by an order of magnitude using an [incremental sampling technique](https://github.com/PrajitR/fast-pixel-cnn) which caches and reuses intermediate states of the network. Consider using this technique for faster inference.
+
