@@ -9,9 +9,9 @@ If our method is useful for your research, please consider citing.
 ## Introduction
 <div align=center>
 <img src="./intro.png" width="50%" height="50%">
+</div>
 
 *(Top) Input incomplete image, where the missing region is depicted in gray. (Middle) Visualization of the generated diverse structures. (Bottom) Output images of our method.*
-</div>
 
 ## Places2 Results
 <div align=center>
