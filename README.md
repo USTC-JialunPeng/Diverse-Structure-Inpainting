@@ -9,15 +9,8 @@ If our method is useful for your research, please consider citing.
 ## Introduction
 <div align=center>
 <img src="./intro.png" width="50%" height="50%">
-</div>
 
 *(Top) Input incomplete image, where the missing region is depicted in gray. (Middle) Visualization of the generated diverse structures. (Bottom) Output images of our method.*
-
-## Places2 Results
-<div align=center>
-<img src="./places2_center.png">
-
-*Results on the Places2 validation set using the center-mask Places2 model.*
 </div>
 
 ## CelebA-HQ Results
@@ -25,6 +18,14 @@ If our method is useful for your research, please consider citing.
 <img src="./celebahq_random.png">
 
 *Results on one CelebA-HQ test image with different holes using the random-mask CelebA-HQ model.*
+</div>
+
+
+## Places2 Results
+<div align=center>
+<img src="./places2_center.png">
+
+*Results on the Places2 validation set using the center-mask Places2 model.*
 </div>
 
 ## Installation
