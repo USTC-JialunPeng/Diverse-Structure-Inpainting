@@ -13,6 +13,13 @@ If our method is useful for your research, please consider citing.
 
 *(Top) Input incomplete image, where the missing region is depicted in gray. (Middle) Visualization of the generated diverse structures. (Bottom) Output images of our method.*
 
+## Places2 Results
+<div align=center>
+<img src="./places2_center.png">
+</div>
+
+*Results on the Places2 validation set using the center-mask Places2 model.*
+
 ## Installation
 This code was tested with TensorFlow 1.12.0, CUDA 9.0, Python 3.6 and Ubuntu 16.04
 
