@@ -16,9 +16,9 @@ If our method is useful for your research, please consider citing.
 ## Places2 Results
 <div align=center>
 <img src="./places2_center.png">
-</div>
 
 *Results on the Places2 validation set using the center-mask Places2 model.*
+</div>
 
 ## Installation
 This code was tested with TensorFlow 1.12.0, CUDA 9.0, Python 3.6 and Ubuntu 16.04
