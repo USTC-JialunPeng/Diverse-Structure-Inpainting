@@ -29,14 +29,20 @@ git clone https://github.com/USTC-JialunPeng/Diverse-Structure-Inpainting.git
 * Prepare the file list. Collect the path of each image and make a file, where each line is a path (end with a carriage return except the last line).
 * Modify `checkpoints_dir`, `dataset`, `train_flist` and `valid_flist` arguments in `train_vqvae.py`, `train_structure_generator.py` and `train_texture_generator.py`.
 * Modify `data/data_loader.py` according to the dataset. For CelebA-HQ, we resize each image to 266x266 and randomly crop a 256x256. For Places2 and ImageNet, we randomly crop a 256x256
-* Run `train_vqvae.py` to train VQ-VAE.
+* Run `python train_vqvae.py` to train VQ-VAE.
 * Modify `vqvae_network_dir` argument in `train_structure_generator.py` and `train_texture_generator.py` based on the path of pre-trained VQ-VAE.
-* Run `train_structure_generator.py` to train the structure generator.
-* Run `train_texture_generator.py` to train the texture generator.
+* Modify the mask setting arguments in `train_structure_generator.py` and `train_texture_generator.py` to choose center mask or random mask.
+* Run `python train_structure_generator.py` to train the structure generator.
+* Run `python train_texture_generator.py` to train the texture generator.
 * Modify `structure_generator_dir` and `texture_generator_dir` arguments in `save_full_model.py` based on the paths of pre-trained structure generator and texture generator.
-*  Run `save_full_model.py` to save the whole model.
+* Run `python save_full_model.py` to save the whole model.
 
 ## Testing
+* Collect the testing set and the corresponding mask set (grayscale, 255 indicates missing region). 
+* Prepare the img file list and the mask file list as training.
+* Modify `checkpoints_dir`, `dataset`, `img_flist` and `mask_flist` arguments in `test.py`.
+* Download the pre-trained model and put `model.ckpt.meta`, `model.ckpt.index`, `model.ckpt.data-00000-of-00001` and `checkpoint` under `model_logs/` directory.
+* Run `python test.py`
 
 ## Pre-trained Models
 Download the pre-trained models using the following links and put them under `model_logs/` directory.
