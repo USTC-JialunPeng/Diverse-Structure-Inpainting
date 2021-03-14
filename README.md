@@ -20,12 +20,21 @@ git clone https://github.com/USTC-JialunPeng/Diverse-Structure-Inpainting.git
 ```
 
 ## Datasets
-* [CelebA-HQ](https://github.com/tkarras/progressive_growing_of_gans): the 1024x1024 high-resolution face images from Growing GANs. 24183 for training, 2993 images for validation and 2824 images for testing.
+* [CelebA-HQ](https://github.com/tkarras/progressive_growing_of_gans): the high-resolution face images from Growing GANs. 24183 for training, 2993 images for validation and 2824 images for testing.
 * [Places2](http://places2.csail.mit.edu/): the challenge data from 365 scene categories. 8 Million images for training, 36K images for validation and 328K images for testing.
 * [ImageNet](http://www.image-net.org/): the data from 1000 natural categories. 1 Million images for training and 50K images for validation.
 
 ## Training
-
+* Collect the dataset. For CelebA-HQ, we collect the 1024x1024 version. For Places2 and ImageNet, we collect the original version.
+* Prepare the file list. Collect the path of each image and make a file, where each line is a path (end with a carriage return except the last line).
+* Modify `checkpoints_dir`, `dataset`, `train_flist` and `valid_flist` arguments in `train_vqvae.py`, `train_structure_generator.py` and `train_texture_generator.py`.
+* Modify `data/data_loader.py` according to the dataset. For CelebA-HQ, we resize each image to 266x266 and randomly crop a 256x256. For Places2 and ImageNet, we randomly crop a 256x256
+* Run `train_vqvae.py` to train VQ-VAE.
+* Modify `vqvae_network_dir` argument in `train_structure_generator.py` and `train_texture_generator.py` based on the path of pre-trained VQ-VAE.
+* Run `train_structure_generator.py` to train the structure generator.
+* Run `train_texture_generator.py` to train the texture generator.
+* Modify `structure_generator_dir` and `texture_generator_dir` arguments in `save_full_model.py` based on the paths of pre-trained structure generator and texture generator.
+*  Run `save_full_model.py` to save the whole model.
 
 ## Testing
 
