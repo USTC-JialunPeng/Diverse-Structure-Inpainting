@@ -28,7 +28,7 @@ If our method is useful for your research, please consider citing.
 </div>
 
 ## Installation
-This code was tested with TensorFlow 1.12.0, CUDA 9.0, Python 3.6 and Ubuntu 16.04
+This code was tested with TensorFlow 1.12.0 (later versions may work, excluding 2.x), CUDA 9.0, Python 3.6 and Ubuntu 16.04
 
 Clone this repository：
 ```
