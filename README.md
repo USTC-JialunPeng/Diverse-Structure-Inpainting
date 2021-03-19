@@ -1,6 +1,6 @@
 # Diverse Structure Inpainting
 
-ArXiv | Papar | Supplementary Material | BibTex
+[ArXiv](https://arxiv.org/abs/2103.10022) | Papar | Supplementary Material | BibTex
 
 This repository is for the CVPR 2021 paper, "Generating Diverse Structure for Image Inpainting With Hierarchical VQ-VAE".
 
