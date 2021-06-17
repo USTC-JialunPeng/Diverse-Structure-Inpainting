@@ -1,10 +1,8 @@
 # Diverse Structure Inpainting
 
-[Papar](https://openaccess.thecvf.com/content/CVPR2021/papers/Peng_Generating_Diverse_Structure_for_Image_Inpainting_With_Hierarchical_VQ-VAE_CVPR_2021_paper.pdf) | [Supplementary Material](https://openaccess.thecvf.com/content/CVPR2021/supplemental/Peng_Generating_Diverse_Structure_CVPR_2021_supplemental.pdf) | [ArXiv](https://arxiv.org/abs/2103.10022) | BibTex
+[Papar](https://openaccess.thecvf.com/content/CVPR2021/papers/Peng_Generating_Diverse_Structure_for_Image_Inpainting_With_Hierarchical_VQ-VAE_CVPR_2021_paper.pdf) | [Supplementary Material](https://openaccess.thecvf.com/content/CVPR2021/supplemental/Peng_Generating_Diverse_Structure_CVPR_2021_supplemental.pdf) | [ArXiv](https://arxiv.org/abs/2103.10022) | [BibTex](https://github.com/USTC-JialunPeng/Diverse-Structure-Inpainting#citing)
 
 This repository is for the CVPR 2021 paper, "Generating Diverse Structure for Image Inpainting With Hierarchical VQ-VAE".
-
-If our method is useful for your research, please consider citing.
 
 ## Introduction
 <div align=center>
@@ -72,3 +70,15 @@ The **center_mask models** are trained with images of 256x256 resolution with ce
 ## Inference Time
 One advantage of GAN-based and VAE-based methods is their fast inference speed. We measure that [Mutual Encoder-Decoder with Feature Equalizations](https://github.com/KumapowerLIU/Rethinking-Inpainting-MEDFE) runs at 0.2 second per image on a single NVIDIA 1080 Ti GPU for images of resolution 256×256. In contrast, our model runs at 45 seconds per image. Naively sampling our autoregressive network is the major source of computational time. Fortunately, this time can be reduced by an order of magnitude using an [incremental sampling technique](https://github.com/PrajitR/fast-pixel-cnn) which caches and reuses intermediate states of the network. Consider using this technique for faster inference.
 
+## Citing
+If our method is useful for your research, please consider citing.
+
+```
+@inproceedings{peng2021generating,
+  title={Generating Diverse Structure for Image Inpainting With Hierarchical VQ-VAE},
+  author={Peng, Jialun and Liu, Dong and Xu, Songcen and Li, Houqiang},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages={10775-10784},
+  year={2021}
+}
+```
