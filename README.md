@@ -54,7 +54,7 @@ git clone https://github.com/USTC-JialunPeng/Diverse-Structure-Inpainting.git
 ## Testing
 * Collect the testing set. For CelebA-HQ, we resize each image to 256x256. For Places2 and ImageNet, we crop a center 256x256.
 * Collect the corresponding mask set (2D grayscale, 0 indicates the known region, 255 indicates the missing region). 
-* Prepare the img file list and the mask file list as training.
+* Prepare the img file list and the mask file list as training. An example can be seen [here](https://github.com/USTC-JialunPeng/Diverse-Structure-Inpainting/issues/10).
 * Modify `checkpoints_dir`, `dataset`, `img_flist` and `mask_flist` arguments in `test.py`.
 * Download the pre-trained model and put `model.ckpt.meta`, `model.ckpt.index`, `model.ckpt.data-00000-of-00001` and `checkpoint` under `model_logs/` directory.
 * Run `python test.py`
